@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectContacts } from 'redux/contactSelectors';
 
@@ -11,9 +11,6 @@ export default function ContactForm() {
 
   const contacts = useSelector(selectContacts);
   const dispatch = useDispatch();
-  // useEffect(() => {
-  //   dispatch(addContactsThunk());
-  // }, [dispatch]);
 
   const nameChange = e => setName(e.target.value.trim());
   const numberChange = e => setNumber(e.target.value.trim());
